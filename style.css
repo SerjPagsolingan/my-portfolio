@@ -112,8 +112,8 @@ section {
     line-height: 1;
 }
 .home-content h3 {
-    margin: 1rem 0;
-    font-size: 4rem;
+    margin: 2rem 0;
+    font-size: 5rem;
 }
 
 .home-content p {
@@ -123,8 +123,8 @@ section {
 }
 
 .home-img img {
-    width: 32vw;
-    border-radius: 50%;
+    width: 26vw;
+    border-radius: 70%;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
 }
