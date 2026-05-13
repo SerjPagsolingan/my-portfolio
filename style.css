@@ -8,9 +8,9 @@
 }
 :root {
   --bg-color: #080808;
-  --second-bg-color: #101010;
+  --second-bg-color: #1b0000;
   --text-color: white;
-  --main-color: #dc0808;
+  --main-color: #f60b0b;
 }
 html {
   font-size: 60%;
@@ -34,7 +34,7 @@ body{
     z-index: 1000;
 }
 #menu-icon{
-   font-size: 3.5rem;
+   font-size: 3.6rem;
    color: var(--main-color);
    display: none;
 }
@@ -48,23 +48,40 @@ body{
 span{
     background: linear-gradient(
         270deg,
-        #DF8908 10%,
+        #bc0202 10%,
         #FF1D15 100%
     );
+    display: inline-block; 
+    padding: 2px 5px;      
+    transition: all 0.3s ease;
     background-clip: text;
     color: transparent;
+    text-shadow: 
+        0 0 5px var(--main-color),
+        0 0 15px var(--main-color);
+    box-shadow: 0 5px 15px -5px var(--main-color);
+    box-shadow: 0 0 20px rgba(var(--main-color-rgb), 0.4); 
+    border-radius: 4px; 
+    transition: all 0.3s ease-in-out;
 }
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-.navbar a:hover{
+.navbar a:hover,
+.navbar a.active{
+    text-shadow: 
+        0 0 5px var(--main-color),
+        0 0 15px var(--main-color);
+    box-shadow: 0 5px 15px -5px var(--main-color);
+    transition: all 0.3s ease-in-out;  
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
+    box-shadow: 0 0 20px rgba(var(--main-color-rgb), 0.4); 
 }
 .gradient-btn{
     font-size: 1.8rem;
@@ -91,6 +108,8 @@ section {
     padding: 10rem 15%;
 }
 
+/* --------------------------- HOME --------------------------- */
+
 .home {
     display: flex;
     align-items: center;
@@ -111,15 +130,17 @@ section {
     margin-top: 1.5rem;
     line-height: 1;
 }
-.home-content h3 {
-    margin: 2rem 0;
-    font-size: 5rem;
+    .home-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    line-height: 1;
 }
 
-.home-content p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.8;
+.home-content h3 {
+    margin: 0rem 0;
+    font-size: 6rem;
+    text-align: justify;
 }
 
 .home-img img {
@@ -133,6 +154,9 @@ section {
                 0 0 50px var(--main-color),
                 0 0 100px var(--main-color);
 }
+
+/* --------------------------- ICONS --------------------------- */
+
 .social-icons a {
     display: inline-flex;
     justify-content: center;
@@ -153,6 +177,9 @@ section {
     transform: scale(1.2) translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
 }
+
+/* --------------------------- BTN --------------------------- */
+
 .btn-group {
     display: flex;
     gap: 1.5rem;
@@ -186,6 +213,9 @@ section {
     background-color: var(--main-color);
     color: black;
 }
+
+/* --------------------------- ABOUT --------------------------- */
+
 .about {
     display: flex;
     justify-content: center;
@@ -209,17 +239,122 @@ section {
 .about-content h2 {
     font-size: 7rem;
     text-align: left;
+    text-align: justify;
 }
 
 .about-content p {
     font-size: 1.8rem;
+    text-align: justify;
 }
 
 .about-content .btn {
     margin: 3rem 0;
 }
+
+
+/* --------------------------- Slider --------------------------- */
+
+.icon-section h2 {
+    font-size: 6rem;
+    text-align: center;
+}
+.icon-section {
+    background: var(--second-bg-color);
+    /* Remove min-height: 100vh if it's inherited from 'section' */
+    min-height: auto !important; 
+    
+    /* Tighten vertical space: Top and Bottom padding reduced */
+    padding: 4rem 0 ;
+    
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem; /* Space between the Title and the Slider */
+}
+
+/* Make the header more compact */
+.icon-header {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.icon-title {
+    font-size: 2rem; /* Slightly smaller to fit the 'river' vibe */
+}
+
+.icon-slider {
+    padding: 1rem 0; /* Minimal padding around the logos */
+}
+
+.icon-track {
+    display: flex;
+    align-items: center;
+    width: max-content; /* Forces all logos onto one line */
+    gap: 70px; /* Space between the big icons */
+    animation: scrollLeft 30s linear infinite;
+    filter: none;
+    transition: transform 0.4s ease;
+}
+
+.logo-item {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.icon-track img {
+    width: 90px; /* BIGGER TECHNOLOGIES */
+    height: 90px;
+    object-fit: contain;
+    filter: none;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo-item:hover img {
+    transform: scale(1.2);
+    filter: none;
+}
+
+/* Bigger Tooltip */
+.logo-tooltip {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(185, 5, 5, 0.416);
+    color: var(--main-color);
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.logo-item:hover .logo-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Infinite Scroll Animation */
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Pause when the "Hearthrob" wants to read */
+.icon-slider:hover .icon-track {
+    animation-play-state: paused;
+}
+
+
+/* --------------------------- WEB SCROLL --------------------------- */
+
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
