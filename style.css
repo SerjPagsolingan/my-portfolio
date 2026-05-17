@@ -221,7 +221,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .about-img img {
@@ -259,7 +259,7 @@ section {
     text-align: center;
 }
 .icon-section {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     /* Remove min-height: 100vh if it's inherited from 'section' */
     min-height: auto !important; 
     
@@ -352,9 +352,14 @@ section {
 
 /* --------------------------- SERVICES/Skills --------------------------- */
 
+.services{
+    background-color: var(--bg-color);
+    color: black;
+}
+
 .services-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax (300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax (200px, 1fr));
     align-items: center;
     gap: 2.5rem;
 }
@@ -363,8 +368,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f60b0b;
-    height: 600px;
+    background-color: var(--bg-color);
+    height: 500px;
     border-radius: 3rem;
     cursor: pointer;
     border: 5px solid transparent;
@@ -373,10 +378,38 @@ section {
 
 .service-box:hover{
     background-color: var(--second-bg-color);
-    color: #f60b0b;
-    border: 5px solid #f60b0b;
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
+
+.service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding 5rem;
+}
+
+.service-info h4{
+    font-size: 4rem;
+    margin: 2rem 0;
+    font-weight: 800;
+}
+
+.service-info p{
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-weight: 1.9;
+    text-align: center;
+}
+
+.service-info i{
+    font-size:20rem;
+    color:azure;
+}
+
 /* --------------------------- WEB SCROLL --------------------------- */
 
 ::-webkit-scrollbar {
