@@ -389,7 +389,7 @@ section {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding 5rem;
+    padding: 5rem;
 }
 
 .service-info h4{
@@ -402,7 +402,7 @@ section {
     font-size: 1.8rem;
     font-weight: 600;
     line-weight: 1.9;
-    text-align: center;
+    
 }
 
 .service-info i{
