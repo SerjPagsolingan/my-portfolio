@@ -350,7 +350,33 @@ section {
     animation-play-state: paused;
 }
 
+/* --------------------------- SERVICES/Skills --------------------------- */
 
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (300px, 1fr));
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.service-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f60b0b;
+    height: 600px;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+
+.service-box:hover{
+    background-color: var(--second-bg-color);
+    color: #f60b0b;
+    border: 5px solid #f60b0b;
+    transform: scale(1.03);
+}
 /* --------------------------- WEB SCROLL --------------------------- */
 
 ::-webkit-scrollbar {
