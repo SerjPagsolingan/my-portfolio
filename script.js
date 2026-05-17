@@ -33,3 +33,14 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        if (!card.classList.contains('active')) {
+            projectCards.forEach(c => c.classList.remove('active'));
+        }
+        card.classList.toggle('active');
+    });
+});
