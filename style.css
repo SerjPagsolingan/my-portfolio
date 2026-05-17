@@ -260,10 +260,10 @@ section {
 }
 .icon-section {
     background: var(--bg-color);
-    /* Remove min-height: 100vh if it's inherited from 'section' */
+    
     min-height: auto !important; 
     
-    /* Tighten vertical space: Top and Bottom padding reduced */
+    
     padding: 4rem 0 ;
     
     width: 100%;
@@ -271,28 +271,28 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5rem; /* Space between the Title and the Slider */
+    gap: 5rem; 
 }
 
-/* Make the header more compact */
+
 .icon-header {
     text-align: center;
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 10px; 
 }
 
 .icon-title {
-    font-size: 2rem; /* Slightly smaller to fit the 'river' vibe */
+    font-size: 2rem; 
 }
 
 .icon-slider {
-    padding: 1rem 0; /* Minimal padding around the logos */
+    padding: 1rem 0; 
 }
 
 .icon-track {
     display: flex;
     align-items: center;
-    width: max-content; /* Forces all logos onto one line */
-    gap: 70px; /* Space between the big icons */
+    width: max-content; 
+    gap: 70px; 
     animation: scrollLeft 30s linear infinite;
     filter: none;
     transition: transform 0.4s ease;
@@ -304,7 +304,7 @@ section {
 }
 
 .icon-track img {
-    width: 90px; /* BIGGER TECHNOLOGIES */
+    width: 90px; 
     height: 90px;
     object-fit: contain;
     filter: none;
@@ -316,7 +316,7 @@ section {
     filter: none;
 }
 
-/* Bigger Tooltip */
+
 .logo-tooltip {
     position: absolute;
     top: -45px;
@@ -345,7 +345,7 @@ section {
     100% { transform: translateX(-50%); }
 }
 
-/* Pause when the "Hearthrob" wants to read */
+
 .icon-slider:hover .icon-track {
     animation-play-state: paused;
 }
@@ -416,8 +416,8 @@ section {
 .projects h2 {
     font-size: 6rem;
     text-align: center;
-    margin-bottom: 4rem;
-    margin-top: auto;
+    margin-bottom: 8rem;
+    margin-top:0cap
 }
 
 .projects{
