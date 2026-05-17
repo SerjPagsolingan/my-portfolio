@@ -44,3 +44,4 @@ projectCards.forEach(card => {
         card.classList.toggle('active');
     });
 });
+
