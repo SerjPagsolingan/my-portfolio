@@ -639,6 +639,33 @@ section {
     transform: translateX(5px);
 }
 
+
+/* --------------------------- FOOTER --------------------------- */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    background-color: var(--bg-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.footer-text p {
+    font-size: 2rem;
+    color: #666;
+    letter-spacing: 2px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+.footer-text p:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+
 /* --------------------------- WEB SCROLL --------------------------- */
 
 ::-webkit-scrollbar {
