@@ -545,6 +545,38 @@ section {
     margin-top: 2rem;
 }
 
+.project-tags {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.4s ease-in-out;
+}
+
+.project-tags i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    filter: drop-shadow(0 0 5px rgba(0, 238, 255, 0.3));
+}
+
+.project-card:not(.active):hover .project-tags {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.active .project-tags {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.active .project-tags i {
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+
 /* --------------------------- CONTACTS --------------------------- */
 
 .contact {
